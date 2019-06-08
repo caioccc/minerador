@@ -173,10 +173,10 @@ class Reader(CommonMiner):
                     hist.save()
 
                     if float(price_new_rep) > float(price_prod_db):
-                        pct = (price_new_rep - price_prod_db) / (price_prod_db)
+                        pct = (float(price_new_rep) - float(price_prod_db)) / (float(price_prod_db))
                         label = str(int(pct * 100)) + "% Price UP"
                     else:
-                        pct = (price_prod_db - price_new_rep) / (price_prod_db)
+                        pct = (float(price_prod_db) - float(price_new_rep)) / (float(price_prod_db))
                         label = str(int(pct * 100)) + "% Price DOWN"
                     message = make_message('CHANGED VALUE ' + label, product_db)
                     telegram_bot_sendtext(message)
