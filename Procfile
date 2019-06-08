@@ -1,0 +1,1 @@
+web: gunicorn minerproject.wsgi --log-file -
