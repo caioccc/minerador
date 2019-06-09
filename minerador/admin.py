@@ -5,10 +5,8 @@ from minerador.models import Product, Site, History
 
 
 class SiteAdmin(admin.ModelAdmin):
-    list_display = ('url', 'id', 'name', 'done', 'created_at', 'count_products')
-
-    def count_products(self, obj):
-        return obj.product_set.all()
+    list_filter = ('name',)
+    list_display = ('url', 'id', 'name', 'done', 'created_at')
 
 
 class ProductAdmin(admin.ModelAdmin):
@@ -19,7 +17,7 @@ class ProductAdmin(admin.ModelAdmin):
     list_display = ('name', 'id', 'price', 'installments', 'site', 'count_history', 'updated_at')
 
     def count_history(self, obj):
-        return obj.history_set.all()
+        return obj.history_set.all().count()
 
 
 class HistoryAdmin(admin.ModelAdmin):
