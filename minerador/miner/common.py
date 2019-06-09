@@ -90,12 +90,12 @@ class CommonMiner():
 
 
 def make_message(tag, product):
-    if product.name and product.installments and product.price:
+    if (product.name != '') and (product.installments != '') and (product.price != ''):
         message = '<b>' + tag + '</b>\n\n<pre>' + product.name + '</pre>\n\n<pre>Price: ' + product.price + '</pre>\n\n<pre>' + \
                   product.installments + '</pre>\n<pre>Site: ' + product.site.name + '</pre>\n\n<pre>URL:</pre>' + \
                   '<a href="' + product.url + '">link</a>'
     else:
-        message = '<b>' + tag + '</b>\n\n<pre>' + product.name + '</pre>\n\n<pre>Price: ' + product.price + '</pre>\n\n<pre>' +\
+        message = '<b>' + tag + '</b>\n\n<pre>' + product.name + '</pre>\n\n<pre>Price: ' + product.price + '</pre>\n\n<pre>' + \
                   '</pre>\n<pre>Site: ' + product.site.name + '</pre>\n\n<pre>URL:</pre>' + \
                   '<a href="' + product.url + '">link</a>'
     # message += (tag + str(': \n'))
