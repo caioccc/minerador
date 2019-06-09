@@ -26,7 +26,7 @@ class Site(TimeStamped):
 
 
 class Product(TimeStamped):
-    name = models.CharField(max_length=100, blank=True, null=True)
+    name = models.CharField(max_length=300, blank=True, null=True)
     desc = models.TextField(blank=True, null=True)
     price = models.CharField(max_length=100, blank=True, null=True)
     installments = models.CharField(max_length=100, blank=True, null=True)
