@@ -105,32 +105,36 @@ def make_message(tag, product):
 
 class Miner(CommonMiner):
     def mine(self, url):
-        page = self.get_page_bs4(url)
-        if page:
-            title = self.get_title(page)
-            desc = self.get_desc(page)
-            photo = self.get_photo(page)
-            price = self.get_price(page)
-            url = url
-            sites = Site.objects.filter(name=self.get_store())
-            if len(sites) > 0:
-                site = sites[0]
+        try:
+            page = self.get_page_bs4(url)
+            if page:
+                title = self.get_title(page)
+                desc = self.get_desc(page)
+                photo = self.get_photo(page)
+                price = self.get_price(page)
+                url = url
+                sites = Site.objects.filter(name=self.get_store())
+                if len(sites) > 0:
+                    site = sites[0]
+                else:
+                    site = None
+                installments = self.get_installments(page)
+                logger.debug('Minerando: ' + title + "," + photo + "," + price + "," + site.name)
+                print('Minerando: ', title, photo, price, installments)
+                product = Product(name=title, desc=desc, price=price, installments=installments,
+                                  site=site, url=url, photo_url=photo)
+                product.save()
+                message = make_message('MINER', product)
+                telegram_bot_sendtext(message)
+                telegram_bot_sendphoto(product.photo_url)
             else:
-                site = None
-            installments = self.get_installments(page)
-            logger.debug('Minerando: ' + title + "," + photo + "," + price + "," + site.name)
-            print('Minerando: ', title, photo, price, installments)
-            product = Product(name=title, desc=desc, price=price, installments=installments,
-                              site=site, url=url, photo_url=photo)
-            product.save()
-            message = make_message('MINER', product)
-            telegram_bot_sendtext(message)
-            telegram_bot_sendphoto(product.photo_url)
-        else:
-            logger.error('Nao foi possivel abrir a page: ' + str(url))
-            print('Nao foi possivel abrir a page: ', str(url))
-            message = 'Nao foi possivel abrir a page: ', str(url)
-            telegram_bot_sendtext(message)
+                logger.error('Nao foi possivel abrir a page: ' + str(url))
+                print('Nao foi possivel abrir a page: ', str(url))
+                message = 'Nao foi possivel abrir a page: ', str(url)
+                telegram_bot_sendtext(message)
+            return True
+        except (Exception,):
+            return False
 
 
 class Reader(CommonMiner):

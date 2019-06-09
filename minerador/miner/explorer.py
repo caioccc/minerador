@@ -31,7 +31,8 @@ def mineData():
         for site in sites:
             domain = site.name
             miner = miners[domain]()
-            miner.mine(site.url)
-            site.done = True
-            site.save()
+            result = miner.mine(site.url)
+            if result:
+                site.done = True
+                site.save()
         time.sleep(check_new_minig_requests_delay)
