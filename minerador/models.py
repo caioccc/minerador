@@ -31,7 +31,7 @@ class Product(TimeStamped):
     price = models.CharField(max_length=100, blank=True, null=True)
     installments = models.TextField(blank=True, null=True)
     sku = models.CharField(max_length=100, blank=True, null=True)
-    site = models.ForeignKey(Site, blank=True, null=True, on_delete=models.CASCADE)
+    site = models.ForeignKey(Site, blank=True, null=True)
     url = models.CharField(max_length=300, blank=True, null=True)
     photo_url = models.CharField(max_length=300, blank=True, null=True)
 

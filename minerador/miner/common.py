@@ -98,13 +98,16 @@ def make_message(tag, product):
         message = '<b>' + tag + '</b>\n\n<pre>' + product.name + '</pre>\n\n<pre>Price: ' + product.price + '</pre>\n\n<pre>' + \
                   '</pre>\n<pre>Site: ' + product.site.name + '</pre>\n\n<pre>URL:</pre>' + \
                   '<a href="' + product.url + '">link</a>'
-    # message += (tag + str(': \n'))
-    # message += (product.name + str(', \n'))
-    # message += (product.price + str(', \n'))
-    # message += (product.installments + str(', \n'))
-    # message += ('Site: ' + product.site.name + str(', \n'))
-    # message += ('Url: ' + product.url + str(', \n'))
-    # message += ('Imagem: ' + product.photo_url)
+    return message
+
+
+def make_message_refresh(tag, product):
+    if (product.name != '') and (product.price != ''):
+        message = '<b>' + tag + '</b>\n\n<pre>' + product.name + '</pre>\n\n<pre>Price: ' + product.price + '</pre>' \
+                  + '\n<pre>Site: ' + product.site.name + '</pre>\n\n<pre>URL:</pre>\n\n' + product.url
+    else:
+        message = '<b>' + tag + '</b>\n\n<pre>' + product.name + '</pre>\n\n<pre>Price: ' + product.price + '</pre>' \
+                  + '\n<pre>Site: ' + product.site.name + '</pre>\n\n'
     return message
 
 
@@ -130,7 +133,11 @@ class Miner(CommonMiner):
                                   site=site, url=url, photo_url=photo)
                 product.save()
                 message = make_message('MINER', product)
-                telegram_bot_sendtext(message)
+                res = telegram_bot_sendtext(message)
+                if 'error_code' in res:
+                    message = make_message_refresh('MINER', product)
+                    res = telegram_bot_sendtext(message)
+                    print(res)
                 telegram_bot_sendphoto(product.photo_url)
             else:
                 logger.error('Nao foi possivel abrir a page: ' + str(url))
@@ -161,7 +168,12 @@ class Reader(CommonMiner):
             logger.debug('Reader: ' + title_new + "," + photo_new + "," + price_new + "," + site_new.name)
             print('Reader: ', title_new, photo_new, price_new, installments_new)
             message = make_message('READER', product)
-            reader_bot_sendtext(message)
+            res = reader_bot_sendtext(message)
+            print(res)
+            if 'error_code' in res:
+                message = make_message_refresh('READER', product)
+                res = reader_bot_sendtext(message)
+                print(res)
             # reader_bot_sendphoto(product.photo_url)
 
             products = Product.objects.filter(name=title_new, url=url_new)
@@ -188,7 +200,12 @@ class Reader(CommonMiner):
                         pct = (float(price_prod_db) - float(price_new_rep)) / (float(price_prod_db))
                         label = str(int(pct * 100)) + "% Price DOWN"
                     message = make_message('CHANGED VALUE ' + label, product_db)
-                    telegram_bot_sendtext(message)
+                    res = telegram_bot_sendtext(message)
+                    print(res)
+                    if 'error_code' in res:
+                        message = make_message_refresh('CHANGED VALUE ' + label, product_db)
+                        res = telegram_bot_sendtext(message)
+                        print(res)
                     telegram_bot_sendphoto(product_db.photo_url)
 
             else:
