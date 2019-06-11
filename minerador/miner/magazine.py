@@ -4,7 +4,12 @@ from common import Reader, Miner
 
 class CustomMiner(Miner):
     def get_title(self, page):
-        return page.find_all('h1', 'header-product__title')[0].text
+        try:
+            title = page.find_all('h1', 'header-product__title')[0].text
+            return title
+        except:
+            title = ''
+            return title
 
     def get_desc(self, page):
         desc = page.find_all('div', 'description__container-text')
@@ -39,7 +44,12 @@ class CustomMiner(Miner):
 
 class CustomReader(Reader):
     def get_title(self, page):
-        return page.find_all('h1', 'header-product__title')[0].text
+        try:
+            title = page.find_all('h1', 'header-product__title')[0].text
+            return title
+        except:
+            title = ''
+            return title
 
     def get_desc(self, page):
         desc = page.find_all('div', 'description__container-text')
