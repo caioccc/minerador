@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03b920d5-b972-40e3-89e2-b67b1c68ef50" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/minerador/miner/magazine.py" beforeDir="false" afterPath="$PROJECT_DIR$/minerador/miner/magazine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/minerador/miner/americanas.py" beforeDir="false" afterPath="$PROJECT_DIR$/minerador/miner/americanas.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,10 +30,19 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/minerador/miner/magazine.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
+            <state relative-caret-position="187">
+              <caret line="11" column="24" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="11" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/minerador/miner/americanas.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
               <caret line="51" column="24" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
             </state>
           </provider>
@@ -117,7 +126,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/minerador/miner/americanas.py" />
         <option value="$PROJECT_DIR$/minerproject/wsgi.py" />
         <option value="$PROJECT_DIR$/minerproject/urls.py" />
         <option value="$PROJECT_DIR$/minerador/apps.py" />
@@ -135,6 +143,7 @@
         <option value="$PROJECT_DIR$/minerador/miner/common.py" />
         <option value="$PROJECT_DIR$/minerador/models.py" />
         <option value="$PROJECT_DIR$/minerador/miner/magazine.py" />
+        <option value="$PROJECT_DIR$/minerador/miner/americanas.py" />
       </list>
     </option>
   </component>
@@ -278,12 +287,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1560000589737</updated>
-      <workItem from="1560262870507" duration="108000" />
+      <workItem from="1560262870507" duration="196000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108000" />
+    <option name="totallyTimeSpent" value="196000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -324,13 +333,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/minerador/miner/pontofrio.py" />
-    <entry file="file://$PROJECT_DIR$/minerador/miner/americanas.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python27/Lib/site-packages/whitenoise/django.py" />
     <entry file="file://C:/Python27/Lib/site-packages/django/contrib/messages/apps.py" />
     <entry file="file://$PROJECT_DIR$/manage.py">
@@ -481,7 +483,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/minerador/miner/magazine.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
+        <state relative-caret-position="187">
+          <caret line="11" column="24" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="11" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minerador/miner/americanas.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
           <caret line="51" column="24" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
         </state>
       </provider>
