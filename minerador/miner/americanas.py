@@ -36,7 +36,12 @@ class CustomMiner(Miner):
         return install
 
     def get_photo(self, page):
-        return page.find_all('div', 'image-gallery-image')[0].img.attrs['src']
+        try:
+            fot = page.find_all('div', 'image-gallery-image')[0].img.attrs['src']
+            return fot
+        except:
+            fot = ''
+            return fot
 
     def get_store(self):
         return 'americanas'
@@ -76,7 +81,12 @@ class CustomReader(Reader):
         return install
 
     def get_photo(self, page):
-        return page.find_all('div', 'image-gallery-image')[0].img.attrs['src']
+        try:
+            fot = page.find_all('div', 'image-gallery-image')[0].img.attrs['src']
+            return fot
+        except:
+            fot = ''
+            return fot
 
     def get_store(self):
         return 'americanas'
