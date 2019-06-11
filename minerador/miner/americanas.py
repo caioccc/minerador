@@ -21,10 +21,13 @@ class CustomMiner(Miner):
 
     def get_price(self, page):
         price = page.find_all('span', 'sales-price')
-        if len(price) == 0:
-            price = page.find_all('p', 'sales-price')[0].text
-        else:
-            price = page.find_all('span', 'sales-price')[0].text
+        try:
+            if len(price) == 0:
+                price = page.find_all('p', 'sales-price')[0].text
+            else:
+                price = page.find_all('span', 'sales-price')[0].text
+        except:
+            price = ''
         return price
 
     def get_installments(self, page):
@@ -66,10 +69,13 @@ class CustomReader(Reader):
 
     def get_price(self, page):
         price = page.find_all('span', 'sales-price')
-        if len(price) == 0:
-            price = page.find_all('p', 'sales-price')[0].text
-        else:
-            price = page.find_all('span', 'sales-price')[0].text
+        try:
+            if len(price) == 0:
+                price = page.find_all('p', 'sales-price')[0].text
+            else:
+                price = page.find_all('span', 'sales-price')[0].text
+        except:
+            price = ''
         return price
 
     def get_installments(self, page):

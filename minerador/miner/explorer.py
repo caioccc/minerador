@@ -22,7 +22,7 @@ def syncTracks():
             customreader = readers[product.site.name]()
             customreader.sync(product)
             time.sleep(5)
-        time.sleep(120)
+        time.sleep(60)
 
 
 def mineData():
