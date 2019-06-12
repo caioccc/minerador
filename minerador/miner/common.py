@@ -210,7 +210,7 @@ class Reader(CommonMiner):
                     telegram_bot_sendphoto(product_db.photo_url)
             except:
                 logger.debug(
-                    'Erro ao tentar checar novo preco produto: ' + title_new + "," + site_new)
+                    'Erro ao tentar checar novo preco produto: ' + title_new )
 
         """
         to = 'caiomarinho8@gmail.com'
