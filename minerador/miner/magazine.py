@@ -1,5 +1,5 @@
 # coding=utf-8
-from common import Reader, Miner
+from minerador.miner.common import Reader, Miner
 
 
 class CustomMiner(Miner):

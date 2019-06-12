@@ -2,6 +2,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 
+
 # Create your models here.
 
 
@@ -51,3 +52,10 @@ class History(TimeStamped):
 
     def __unicode__(self):
         return "%s" % self.product
+
+
+class HistoricSummary(History):
+    class Meta:
+        proxy = True
+        verbose_name = 'Historic Summary'
+        verbose_name_plural = 'Historic Summaries'

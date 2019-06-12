@@ -1,9 +1,8 @@
 # coding=utf-8
 import time
 
-import americanas
-from common import sync_urls_delay, check_new_minig_requests_delay
-from minerador.miner import magazine
+from minerador.miner.common import sync_urls_delay, check_new_minig_requests_delay
+from minerador.miner import magazine, americanas
 from minerador.models import Product, Site
 
 readers = {"americanas": americanas.CustomReader,
@@ -22,7 +21,7 @@ def syncTracks():
             customreader = readers[product.site.name]()
             customreader.sync(product)
             time.sleep(5)
-        time.sleep(60)
+        time.sleep(sync_urls_delay)
 
 
 def mineData():
