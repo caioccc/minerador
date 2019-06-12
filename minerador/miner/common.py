@@ -176,45 +176,41 @@ class Reader(CommonMiner):
                 print(res)
             # reader_bot_sendphoto(product.photo_url)
 
-            products = Product.objects.filter(name=title_new, url=url_new)
-            if len(products) > 0:
-                product_db = products[0]
-                price_prod_db = product_db.price.replace('R$ ', '').replace('.', '').replace(',', '.')
-                price_new_rep = price_new.replace('R$ ', '').replace('.', '').replace(',', '.')
-                try:
-                    if float(price_new_rep) > float(price_prod_db) or float(price_new_rep) < float(price_prod_db):
-                        product_db.price = price_new
-                        product_db.name = title_new
-                        product_db.installments = installments_new
-                        product_db.desc = desc_new
-                        product_db.foto_url = photo_new
-                        product_db.save()
-                        logger.debug('CHANGED VALUE: ' + title_new + price_new + "," + site_new.name)
-                        print('CHANGED VALUE: ', price_new, title_new, installments_new)
-                        hist = History(product=product_db, price=price_new)
-                        hist.save()
+            # products = Product.objects.filter(name=title_new, url=url_new)
+            # if len(products) > 0:
+            product_db = product
+            price_prod_db = product_db.price.replace('R$ ', '').replace('.', '').replace(',', '.')
+            price_new_rep = price_new.replace('R$ ', '').replace('.', '').replace(',', '.')
+            try:
+                if float(price_new_rep) > float(price_prod_db) or float(price_new_rep) < float(price_prod_db):
+                    product_db.price = price_new
+                    product_db.name = title_new
+                    product_db.installments = installments_new
+                    product_db.desc = desc_new
+                    product_db.foto_url = photo_new
+                    product_db.save()
+                    logger.debug('CHANGED VALUE: ' + title_new + price_new + "," + site_new.name)
+                    print('CHANGED VALUE: ', price_new, title_new, installments_new)
+                    hist = History(product=product_db, price=price_new)
+                    hist.save()
 
-                        if float(price_new_rep) > float(price_prod_db):
-                            pct = (float(price_new_rep) - float(price_prod_db)) / (float(price_prod_db))
-                            label = str(int(pct * 100)) + "% Price UP"
-                        else:
-                            pct = (float(price_prod_db) - float(price_new_rep)) / (float(price_prod_db))
-                            label = str(int(pct * 100)) + "% Price DOWN"
-                        message = make_message('CHANGED VALUE ' + label, product_db)
+                    if float(price_new_rep) > float(price_prod_db):
+                        pct = (float(price_new_rep) - float(price_prod_db)) / (float(price_prod_db))
+                        label = str(int(pct * 100)) + "% Price UP"
+                    else:
+                        pct = (float(price_prod_db) - float(price_new_rep)) / (float(price_prod_db))
+                        label = str(int(pct * 100)) + "% Price DOWN"
+                    message = make_message('CHANGED VALUE ' + label, product_db)
+                    res = telegram_bot_sendtext(message)
+                    print(res)
+                    if 'error_code' in res:
+                        message = make_message_refresh('CHANGED VALUE ' + label, product_db)
                         res = telegram_bot_sendtext(message)
                         print(res)
-                        if 'error_code' in res:
-                            message = make_message_refresh('CHANGED VALUE ' + label, product_db)
-                            res = telegram_bot_sendtext(message)
-                            print(res)
-                        telegram_bot_sendphoto(product_db.photo_url)
-                except:
-                    logger.debug(
-                        'Erro ao tentar checar novo preco produto: ' + title_new + "," + site_new)
-            else:
+                    telegram_bot_sendphoto(product_db.photo_url)
+            except:
                 logger.debug(
-                    'Produto nao existe,: ' + title_new + "," + photo_new + "," + price_new + "," + site_new)
-                print(title_new, photo_new, price_new, installments_new)
+                    'Erro ao tentar checar novo preco produto: ' + title_new + "," + site_new)
 
         """
         to = 'caiomarinho8@gmail.com'
