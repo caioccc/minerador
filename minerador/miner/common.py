@@ -152,65 +152,68 @@ class Miner(CommonMiner):
 class Reader(CommonMiner):
     def sync(self, product):
         url = product.url
-        page = self.get_page_bs4(url)
-        if page:
-            title_new = self.get_title(page)
-            desc_new = self.get_desc(page)
-            photo_new = self.get_photo(page)
-            price_new = self.get_price(page)
-            url_new = url
-            sites = Site.objects.filter(name=self.get_store())
-            if len(sites) > 0:
-                site_new = sites[0]
-            else:
-                site_new = None
-            installments_new = self.get_installments(page)
-            logger.debug('Reader: ' + title_new + "," + photo_new + "," + price_new + "," + site_new.name)
-            print('Reader: ', title_new, photo_new, price_new, installments_new)
-            message = make_message('READER', product)
-            res = reader_bot_sendtext(message)
-            print(res)
-            if 'error_code' in res:
-                message = make_message_refresh('READER', product)
+        try:
+            page = self.get_page_bs4(url)
+            if page:
+                title_new = self.get_title(page)
+                desc_new = self.get_desc(page)
+                photo_new = self.get_photo(page)
+                price_new = self.get_price(page)
+                url_new = url
+                sites = Site.objects.filter(name=self.get_store())
+                if len(sites) > 0:
+                    site_new = sites[0]
+                else:
+                    site_new = None
+                installments_new = self.get_installments(page)
+                logger.debug('Reader: ' + title_new + "," + photo_new + "," + price_new + "," + site_new.name)
+                print('Reader: ', title_new, photo_new, price_new, installments_new)
+                message = make_message('READER', product)
                 res = reader_bot_sendtext(message)
                 print(res)
-            # reader_bot_sendphoto(product.photo_url)
-
-            # products = Product.objects.filter(name=title_new, url=url_new)
-            # if len(products) > 0:
-            product_db = product
-            price_prod_db = product_db.price.replace('R$ ', '').replace('.', '').replace(',', '.')
-            price_new_rep = price_new.replace('R$ ', '').replace('.', '').replace(',', '.')
-            try:
-                if float(price_new_rep) > float(price_prod_db) or float(price_new_rep) < float(price_prod_db):
-                    product_db.price = price_new
-                    product_db.name = title_new
-                    product_db.installments = installments_new
-                    product_db.desc = desc_new
-                    product_db.foto_url = photo_new
-                    product_db.save()
-                    logger.debug('CHANGED VALUE: ' + title_new + price_new + "," + site_new.name)
-                    print('CHANGED VALUE: ', price_new, title_new, installments_new)
-                    hist = History(product=product_db, price=price_new)
-                    hist.save()
-
-                    if float(price_new_rep) > float(price_prod_db):
-                        pct = (float(price_new_rep) - float(price_prod_db)) / (float(price_prod_db))
-                        label = str(int(pct * 100)) + "% Price UP"
-                    else:
-                        pct = (float(price_prod_db) - float(price_new_rep)) / (float(price_prod_db))
-                        label = str(int(pct * 100)) + "% Price DOWN"
-                    message = make_message('CHANGED VALUE ' + label, product_db)
-                    res = telegram_bot_sendtext(message)
+                if 'error_code' in res:
+                    message = make_message_refresh('READER', product)
+                    res = reader_bot_sendtext(message)
                     print(res)
-                    if 'error_code' in res:
-                        message = make_message_refresh('CHANGED VALUE ' + label, product_db)
+                # reader_bot_sendphoto(product.photo_url)
+
+                # products = Product.objects.filter(name=title_new, url=url_new)
+                # if len(products) > 0:
+                product_db = product
+                price_prod_db = product_db.price.replace('R$ ', '').replace('.', '').replace(',', '.')
+                price_new_rep = price_new.replace('R$ ', '').replace('.', '').replace(',', '.')
+                try:
+                    if float(price_new_rep) > float(price_prod_db) or float(price_new_rep) < float(price_prod_db):
+                        product_db.price = price_new
+                        product_db.name = title_new
+                        product_db.installments = installments_new
+                        product_db.desc = desc_new
+                        product_db.foto_url = photo_new
+                        product_db.save()
+                        logger.debug('CHANGED VALUE: ' + title_new + price_new + "," + site_new.name)
+                        print('CHANGED VALUE: ', price_new, title_new, installments_new)
+                        hist = History(product=product_db, price=price_new)
+                        hist.save()
+
+                        if float(price_new_rep) > float(price_prod_db):
+                            pct = (float(price_new_rep) - float(price_prod_db)) / (float(price_prod_db))
+                            label = str(int(pct * 100)) + "% Price UP"
+                        else:
+                            pct = (float(price_prod_db) - float(price_new_rep)) / (float(price_prod_db))
+                            label = str(int(pct * 100)) + "% Price DOWN"
+                        message = make_message('CHANGED VALUE ' + label, product_db)
                         res = telegram_bot_sendtext(message)
                         print(res)
-                    telegram_bot_sendphoto(product_db.photo_url)
-            except:
-                logger.debug(
-                    'Erro ao tentar checar novo preco produto: ' + title_new )
+                        if 'error_code' in res:
+                            message = make_message_refresh('CHANGED VALUE ' + label, product_db)
+                            res = telegram_bot_sendtext(message)
+                            print(res)
+                        telegram_bot_sendphoto(product_db.photo_url)
+                except:
+                    logger.debug(
+                        'Erro ao tentar checar novo preco produto: ' + title_new )
+        except:
+            logger.info('PAGE NOT EXISTS: ' + product.url)
 
         """
         to = 'caiomarinho8@gmail.com'
