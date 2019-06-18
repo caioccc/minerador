@@ -7,11 +7,11 @@ from minerador.miner import magazine
 from minerador.models import Product, Site
 
 readers = {"americanas": americanas.CustomReader,
-           "magazine": magazine.CustomReader
+           # "magazine": magazine.CustomReader
            }
 
 miners = {"americanas": americanas.CustomMiner,
-          "magazine": magazine.CustomMiner
+          # "magazine": magazine.CustomMiner
           }
 
 

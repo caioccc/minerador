@@ -10,5 +10,5 @@ class IndexView(TemplateView):
 
     def get(self, request, *args, **kwargs):
         Thread(target=mineData).start()
-        Thread(target=syncTracks).start()
+        # Thread(target=syncTracks).start()
         return super(IndexView, self).get(request, *args, **kwargs)

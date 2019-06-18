@@ -45,6 +45,31 @@ def safe_str(obj):
 
 
 class CommonMiner():
+    def _get_categories(self, page):
+        return []
+
+    def get_url_no_bars_last(self, url):
+        if url[len(url) - 1] == '/':
+            url = url[:-1]
+        return url
+
+    def get_num_pages(self, page):
+        return 1
+
+    def get_url_paginated(self, url, paging):
+        return ''
+
+    def get_categories_link(self, page):
+        urls = []
+        categories = self._get_categories(page)
+        for item in categories:
+            if 'href' in item.attrs:
+                urls.append(item.attrs['href'])
+        return urls
+
+    def get_products_urls(self, page):
+        return []
+
     def get_page_bs4(self, url):
         req = requests.get(url)
         if req.status_code == 200:
@@ -112,40 +137,55 @@ def make_message_refresh(tag, product):
 
 
 class Miner(CommonMiner):
+
     def mine(self, url):
-        try:
-            page = self.get_page_bs4(url)
-            if page:
-                title = self.get_title(page)
-                desc = self.get_desc(page)
-                photo = self.get_photo(page)
-                price = self.get_price(page)
-                url = url
-                sites = Site.objects.filter(name=self.get_store())
-                if len(sites) > 0:
-                    site = sites[0]
-                else:
-                    site = None
-                installments = self.get_installments(page)
-                logger.debug('Minerando: ' + title + "," + photo + "," + price + "," + site.name)
-                print('Minerando: ', title, photo, price, installments)
-                product = Product(name=title, desc=desc, price=price, installments=installments,
-                                  site=site, url=url, photo_url=photo)
-                product.save()
-                message = make_message('MINER', product)
-                res = telegram_bot_sendtext(message)
-                if 'error_code' in res:
-                    message = make_message_refresh('MINER', product)
-                    res = telegram_bot_sendtext(message)
-                    print(res)
-                telegram_bot_sendphoto(product.photo_url)
-            else:
-                logger.error('Nao foi possivel abrir a page: ' + str(url))
-                print('Nao foi possivel abrir a page: ', str(url))
-                message = 'Nao foi possivel abrir a page: ', str(url)
-                telegram_bot_sendtext(message)
+        site_initial = self.get_page_bs4(url)
+        if site_initial:
+            print('Site: ', url)
+            categories = self.get_categories_link(site_initial)
+            for categorie_url in categories:
+                categorie_url = self.get_url_no_bars_last(categorie_url)
+                categorie_url_test = categorie_url + '?page=2'
+                page_categorie = self.get_page_bs4(categorie_url_test)
+                if page_categorie:
+                    print('Categoria: ', categorie_url_test)
+                    total_pages = self.get_num_pages(page_categorie)
+                    print('total_pages: ', total_pages)
+                    for paging in range(0, total_pages):
+                        categorie_url_paging = self.get_url_paginated(categorie_url, (paging + 1))
+                        page_categorie_bs = self.get_page_bs4(categorie_url_paging)
+                        if page_categorie_bs:
+                            print('Page: ', str(paging+1))
+                            products_page_categorie = self.get_products_urls(page_categorie_bs)
+                            print(categorie_url_paging)
+                            print(products_page_categorie)
+                            for product_url in products_page_categorie:
+                                page = self.get_page_bs4(product_url)
+                                if page:
+                                    title = self.get_title(page)
+                                    desc = self.get_desc(page)
+                                    photo = self.get_photo(page)
+                                    price = self.get_price(page)
+                                    url = product_url
+                                    sites = Site.objects.filter(name=self.get_store())
+                                    if len(sites) > 0:
+                                        site = sites[0]
+                                    else:
+                                        site = None
+                                    installments = self.get_installments(page)
+                                    print('Minerando: ', title)
+                                    product = Product(name=title, desc=desc, price=price, installments=installments,
+                                                      site=site, url=url, photo_url=photo)
+                                    product.save()
+                                else:
+                                    print('Nao foi possivel abrir a page: ', str(url))
+                                    break
+                        else:
+                            print('Nao foi possivel abrir a page: ', str(categorie_url_paging))
+                            break
             return True
-        except (Exception,):
+        else:
+            print('Nao foi possivel abrir a page: ', str(url))
             return False
 
 
@@ -166,19 +206,7 @@ class Reader(CommonMiner):
                 else:
                     site_new = None
                 installments_new = self.get_installments(page)
-                logger.debug('Reader: ' + title_new + "," + photo_new + "," + price_new + "," + site_new.name)
-                print('Reader: ', title_new, photo_new, price_new, installments_new)
-                message = make_message('READER', product)
-                res = reader_bot_sendtext(message)
-                print(res)
-                if 'error_code' in res:
-                    message = make_message_refresh('READER', product)
-                    res = reader_bot_sendtext(message)
-                    print(res)
-                # reader_bot_sendphoto(product.photo_url)
-
-                # products = Product.objects.filter(name=title_new, url=url_new)
-                # if len(products) > 0:
+                print('Reader: ', title_new)
                 product_db = product
                 price_prod_db = product_db.price.replace('R$ ', '').replace('.', '').replace(',', '.')
                 price_new_rep = price_new.replace('R$ ', '').replace('.', '').replace(',', '.')
@@ -190,8 +218,7 @@ class Reader(CommonMiner):
                         product_db.desc = desc_new
                         product_db.foto_url = photo_new
                         product_db.save()
-                        logger.debug('CHANGED VALUE: ' + title_new + price_new + "," + site_new.name)
-                        print('CHANGED VALUE: ', price_new, title_new, installments_new)
+                        print('CHANGED VALUE: ', price_new, title_new)
                         hist = History(product=product_db, price=price_new)
                         hist.save()
 
@@ -201,17 +228,10 @@ class Reader(CommonMiner):
                         else:
                             pct = (float(price_prod_db) - float(price_new_rep)) / (float(price_prod_db))
                             label = str(int(pct * 100)) + "% Price DOWN"
-                        message = make_message('CHANGED VALUE ' + label, product_db)
-                        res = telegram_bot_sendtext(message)
-                        print(res)
-                        if 'error_code' in res:
-                            message = make_message_refresh('CHANGED VALUE ' + label, product_db)
-                            res = telegram_bot_sendtext(message)
-                            print(res)
-                        telegram_bot_sendphoto(product_db.photo_url)
+                        print(label, ' ', price_new, title_new)
                 except:
                     logger.debug(
-                        'Erro ao tentar checar novo preco produto: ' + title_new )
+                        'Erro ao tentar checar novo preco produto: ' + title_new)
         except:
             logger.info('PAGE NOT EXISTS: ' + product.url)
 
