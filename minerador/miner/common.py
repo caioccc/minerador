@@ -155,7 +155,7 @@ class Miner(CommonMiner):
                         categorie_url_paging = self.get_url_paginated(categorie_url, (paging + 1))
                         page_categorie_bs = self.get_page_bs4(categorie_url_paging)
                         if page_categorie_bs:
-                            print('Page: ', str(paging+1))
+                            print('Page: ', str(paging + 1))
                             products_page_categorie = self.get_products_urls(page_categorie_bs)
                             print(categorie_url_paging)
                             print(products_page_categorie)
@@ -166,7 +166,7 @@ class Miner(CommonMiner):
                                     desc = self.get_desc(page)
                                     photo = self.get_photo(page)
                                     price = self.get_price(page)
-                                    url = product_url
+                                    url_prod = product_url
                                     sites = Site.objects.filter(name=self.get_store())
                                     if len(sites) > 0:
                                         site = sites[0]
@@ -175,17 +175,17 @@ class Miner(CommonMiner):
                                     installments = self.get_installments(page)
                                     print('Minerando: ', title)
                                     product = Product(name=title, desc=desc, price=price, installments=installments,
-                                                      site=site, url=url, photo_url=photo)
+                                                      site=site, url=url_prod, photo_url=photo)
                                     product.save()
                                 else:
-                                    print('Nao foi possivel abrir a page: ', str(url))
+                                    print('Nao foi possivel abrir a page prod: ', str(url_prod))
                                     break
                         else:
-                            print('Nao foi possivel abrir a page: ', str(categorie_url_paging))
+                            print('Nao foi possivel abrir a page categorie: ', str(categorie_url_paging))
                             break
             return True
         else:
-            print('Nao foi possivel abrir a page: ', str(url))
+            print('Nao foi possivel abrir a page site: ', str(url))
             return False
 
 
@@ -195,43 +195,46 @@ class Reader(CommonMiner):
         try:
             page = self.get_page_bs4(url)
             if page:
-                title_new = self.get_title(page)
-                desc_new = self.get_desc(page)
-                photo_new = self.get_photo(page)
                 price_new = self.get_price(page)
-                url_new = url
-                sites = Site.objects.filter(name=self.get_store())
-                if len(sites) > 0:
-                    site_new = sites[0]
-                else:
-                    site_new = None
-                installments_new = self.get_installments(page)
-                print('Reader: ', title_new)
-                product_db = product
-                price_prod_db = product_db.price.replace('R$ ', '').replace('.', '').replace(',', '.')
+                print('Reader: ', product.id, ' ', product.name)
+                price_prod_db = product.price.replace('R$ ', '').replace('.', '').replace(',', '.')
                 price_new_rep = price_new.replace('R$ ', '').replace('.', '').replace(',', '.')
+                if product.history_set.count() == 0:
+                    first_hist = History(product=product, price=product.price)
+                    first_hist.save()
                 try:
                     if float(price_new_rep) > float(price_prod_db) or float(price_new_rep) < float(price_prod_db):
-                        product_db.price = price_new
-                        product_db.name = title_new
-                        product_db.installments = installments_new
-                        product_db.desc = desc_new
-                        product_db.foto_url = photo_new
-                        product_db.save()
-                        print('CHANGED VALUE: ', price_new, title_new)
-                        hist = History(product=product_db, price=price_new)
+                        product.price = price_new
+                        product.save()
+                        print('CHANGED VALUE: ', price_new, product.name)
+                        hist = History(product=product, price=price_new)
                         hist.save()
-
                         if float(price_new_rep) > float(price_prod_db):
                             pct = (float(price_new_rep) - float(price_prod_db)) / (float(price_prod_db))
                             label = str(int(pct * 100)) + "% Price UP"
                         else:
                             pct = (float(price_prod_db) - float(price_new_rep)) / (float(price_prod_db))
                             label = str(int(pct * 100)) + "% Price DOWN"
-                        print(label, ' ', price_new, title_new)
+                            if int(pct * 100) >= 5:
+                                message = make_message('CHANGED VALUE ' + label, product)
+                                bot_chatID_caio = '451429199'
+                                bot_chatID_ll = '861252741'
+                                res = reader_bot_sendtext(message, bot_chatID_caio)
+                                res_2 = reader_bot_sendtext(message, bot_chatID_ll)
+                                if 'error_code' in res:
+                                    message = make_message_refresh('CHANGE VALUE', product)
+                                    res = reader_bot_sendtext(message, bot_chatID_caio)
+                                    print(res)
+                                if 'error_code' in res_2:
+                                    message = make_message_refresh('CHANGE VALUE', product)
+                                    res_2 = reader_bot_sendtext(message, bot_chatID_ll)
+                                    print(res_2)
+                                reader_bot_sendphoto(product.photo_url, bot_chatID_caio)
+                                reader_bot_sendphoto(product.photo_url, bot_chatID_ll)
+                        print(label + ' ', price_new, product.name)
                 except:
                     logger.debug(
-                        'Erro ao tentar checar novo preco produto: ' + title_new)
+                        'Erro ao tentar checar novo preco produto: ' + product.name)
         except:
             logger.info('PAGE NOT EXISTS: ' + product.url)
 

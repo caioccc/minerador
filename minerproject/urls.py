@@ -17,9 +17,14 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-from minerador.views import IndexView
+from minerador.views import IndexView, OrderListJson, ProductDetailView, ListBestView, ListBestJson
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', IndexView.as_view(), name='index')
+    url(r'^$', IndexView.as_view(), name='index'),
+    url(r'^detail/(?P<pk>[0-9]+)/$', ProductDetailView.as_view(), name='detail'),
+    url(r'^my/datatable/data/$', OrderListJson.as_view(), name='order_list_json'),
+    url(r'^list/best/$', ListBestView.as_view(), name='list_best'),
+    url(r'^best/datatable/data/$', ListBestJson.as_view(), name='best_list_json'),
+
 ]

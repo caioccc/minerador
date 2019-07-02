@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load customtags %}
+
+{% block content %}
+    <h1>List Best Products</h1>
+    <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a
+        mostly barebones HTML document.</p>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <table id="table" class="table table-bordered table-striped" class="display"
+                   cellspacing="0" width="100%">
+                <thead>
+                <tr>
+                    <th>Photo</th>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>History (Count)</th>
+                    <th>Url</th>
+                    <th>Created at</th>
+                    <th>Updated at</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#table').DataTable({
+                "processing": true,
+                "serverSide": true,
+                "ajax": "{% url 'best_list_json' %}",
+                "fnRowCallback": function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
+                    {#var imgLink = aData['photo_url']; // if your JSON is 3D#}
+                    var imgLink = aData[0]; // where 4 is the zero-origin column for 2D
+                    var urlLink = aData[5];
+                    var idText = aData[1];
+                    var aTag = '<a href="' + urlLink + '" target="_blank">' + urlLink + '</a>';
+                    var imgTag = '<img src="' + imgLink + '" style="height:40px;width:40px;"/>';
+                    var idTag = '<a href="/detail/' + idText + '" target="_blank">' + idText + '</a>';
+                    $('td:eq(0)', nRow).html(imgTag); // where 4 is the zero-origin visible column in the HTML
+                    $('td:eq(1)', nRow).html(idTag);
+                    $('td:eq(5)', nRow).html(aTag);
+                    return nRow;
+                }
+            });
+        });
+    </script>
+{% endblock %}

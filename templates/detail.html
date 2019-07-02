@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content %}
+    <center>
+        <style>
+            .textmon {
+                font-weight: 100;
+                font-size: 28px;
+            }
+        </style>
+        <hr/>
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <div class="thumbnail">
+                    <img alt="{{ produto.id }}" src="{{ produto.photo_url }}">
+                    <div class="caption">
+                        <h3>{{ produto.name }}</h3>
+                        <p>{{ produto.desc }}</p>
+                    </div>
+                    <h3>
+                        <a href="{{ produto.url }}">LINK URL</a>
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <h2>Preço Atual: R$ {{ produto.price }}
+
+            {% if produto|isdown %}
+                <i class="fa fa-sort-down" style="color: red;"></i>
+                <span style="color: red;">(- {{ produto|count_percentage }})</span>
+            {% else %}
+                <i class="fa fa-sort-up" style="color: green;"></i>
+                <span style="color: green;">(+ {{ produto|count_percentage }})</span>
+            {% endif %}
+            <span class="textmon">
+                {% if produto|mediadez %}
+                    <i class="fa fa-thumbs-up" style="color: green;"></i> Melhor Comprar! Preço fora do comum!
+                {% elif produto|mediacinco %}
+                    <i class="fa fa-thumbs-up" style="color: green;"></i> Pode Comprar! Preço está bom!
+                {% elif produto|mediadois %}
+                    <i class="fa fa-warning" style="color: #ffc107;"></i> Preço bom! Mas já foi melhor!
+                {% else %}
+                    <i class="fa fa-thumbs-down" style="color: red;"></i> Não compre! Preço está acima da média!
+                {% endif %}
+            </span>
+        </h2>
+    </center>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div id="container"></div>
+        </div>
+    </div>
+    <br/><br/>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <table id="table" class="table table-bordered table-striped" class="display"
+                   cellspacing="0" width="100%">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Price</th>
+                    <th>Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for history in produto.history_set.all %}
+                    <tr>
+                        <td>{{ history.id }}</td>
+                        <td>{{ history.price }}</td>
+                        <td>{{ history.created_at }}</td>
+                    </tr>
+                {% empty %}
+                    <tr>
+                        <td colspan="3">
+                            Não há histórico para este produto.
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            {% if  produto.history_set.count > 0 %}
+                $('#table').DataTable({});
+            {% endif %}
+            Highcharts.setOptions({
+                lang: {
+                    months: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+                    shortMonths: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+                    weekdays: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'],
+                    loading: ['Atualizando o gráfico...aguarde'],
+                    contextButtonTitle: 'Exportar gráfico',
+                    decimalPoint: ',',
+                    thousandsSep: '.',
+                    downloadJPEG: 'Baixar imagem JPEG',
+                    downloadPDF: 'Baixar arquivo PDF',
+                    downloadPNG: 'Baixar imagem PNG',
+                    downloadSVG: 'Baixar vetor SVG',
+                    printChart: 'Imprimir gráfico',
+                    rangeSelectorFrom: 'De',
+                    rangeSelectorTo: 'Para',
+                    rangeSelectorZoom: 'Zoom',
+                    resetZoom: 'Limpar Zoom',
+                    resetZoomTitle: 'Voltar Zoom para nível 1:1',
+                }
+            });
+            Highcharts.stockChart('container', {
+                rangeSelector: {
+                    selected: 1
+                },
+                title: {
+                    text: '{{ produto.name }}'
+                },
+                series: [{
+                    name: 'AAPL',
+                    data: [
+                        {% for histor in produto.history_set.all %}
+                            [{{ histor.created_at|to_timestamp }}, parseFloat({{ histor.price|replace_dot }})],
+                        {% endfor %}
+                    ],
+                    tooltip: {
+                        valueDecimals: 2
+                    }
+                }]
+            });
+        });
+    </script>
+{% endblock %}
