@@ -2,215 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03b920d5-b972-40e3-89e2-b67b1c68ef50" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/minerador/templatetags/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/minerador/templatetags/customtags.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/dataTables.bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/dataTables.bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/dataTables.bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/AutoFill/Readme.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/AutoFill/css/dataTables.autoFill.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/AutoFill/css/dataTables.autoFill.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/AutoFill/examples/columns.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/AutoFill/examples/complete-callback.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/AutoFill/examples/fill-both.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/AutoFill/examples/fill-horizontal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/AutoFill/examples/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/AutoFill/examples/scrolling.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/AutoFill/examples/simple.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/AutoFill/examples/step-callback.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/AutoFill/images/filler.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/AutoFill/js/dataTables.autoFill.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/AutoFill/js/dataTables.autoFill.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColReorder/License.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColReorder/Readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColReorder/css/dataTables.colReorder.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColReorder/css/dataTables.colReorder.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColReorder/examples/alt_insert.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColReorder/examples/col_filter.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColReorder/examples/colvis.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColReorder/examples/fixedcolumns.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColReorder/examples/fixedheader.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColReorder/examples/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColReorder/examples/jqueryui.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColReorder/examples/new_init.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColReorder/examples/predefined.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColReorder/examples/realtime.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColReorder/examples/reset.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColReorder/examples/scrolling.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColReorder/examples/server_side.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColReorder/examples/simple.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColReorder/examples/state_save.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColReorder/images/insert.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColReorder/js/dataTables.colReorder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColReorder/js/dataTables.colReorder.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColVis/License.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColVis/Readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColVis/css/dataTables.colVis.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColVis/css/dataTables.colVis.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColVis/css/dataTables.colvis.jqueryui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColVis/examples/button_order.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColVis/examples/exclude_columns.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColVis/examples/group_columns.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColVis/examples/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColVis/examples/jqueryui.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColVis/examples/mouseover.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColVis/examples/new_init.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColVis/examples/restore.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColVis/examples/simple.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColVis/examples/text.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColVis/examples/title_callback.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColVis/examples/two_tables.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColVis/examples/two_tables_identical.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColVis/js/dataTables.colVis.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/ColVis/js/dataTables.colVis.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/FixedColumns/License.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/FixedColumns/Readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/FixedColumns/css/dataTables.fixedColumns.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/FixedColumns/css/dataTables.fixedColumns.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/FixedColumns/examples/bootstrap.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/FixedColumns/examples/col_filter.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/FixedColumns/examples/colvis.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/FixedColumns/examples/css_size.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/FixedColumns/examples/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/FixedColumns/examples/index_column.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/FixedColumns/examples/left_right_columns.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/FixedColumns/examples/right_column.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/FixedColumns/examples/rowspan.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/FixedColumns/examples/server-side-processing.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/FixedColumns/examples/simple.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/FixedColumns/examples/size_fixed.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/FixedColumns/examples/size_fluid.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/FixedColumns/examples/two_columns.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/FixedColumns/js/dataTables.fixedColumns.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/FixedColumns/js/dataTables.fixedColumns.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/FixedHeader/Readme.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/FixedHeader/css/dataTables.fixedHeader.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/FixedHeader/css/dataTables.fixedHeader.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/FixedHeader/examples/header_footer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/FixedHeader/examples/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/FixedHeader/examples/simple.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/FixedHeader/examples/top_left_right.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/FixedHeader/examples/two_tables.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/FixedHeader/examples/zIndexes.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/FixedHeader/js/dataTables.fixedHeader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/FixedHeader/js/dataTables.fixedHeader.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/KeyTable/Readme.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/KeyTable/css/dataTables.keyTable.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/KeyTable/css/dataTables.keyTable.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/KeyTable/examples/events.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/KeyTable/examples/html.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/KeyTable/examples/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/KeyTable/examples/scrolling.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/KeyTable/examples/simple.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/KeyTable/js/dataTables.keyTable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/KeyTable/js/dataTables.keyTable.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Responsive/License.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Responsive/Readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Responsive/css/dataTables.responsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Responsive/css/dataTables.responsive.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Responsive/examples/child-rows/column-control.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Responsive/examples/child-rows/custom-renderer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Responsive/examples/child-rows/disable-child-rows.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Responsive/examples/child-rows/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Responsive/examples/child-rows/right-column.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Responsive/examples/child-rows/whole-row-control.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Responsive/examples/display-control/auto.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Responsive/examples/display-control/classes.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Responsive/examples/display-control/complexHeader.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Responsive/examples/display-control/fixedHeader.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Responsive/examples/display-control/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Responsive/examples/display-control/init-classes.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Responsive/examples/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Responsive/examples/initialisation/ajax.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Responsive/examples/initialisation/className.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Responsive/examples/initialisation/default.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Responsive/examples/initialisation/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Responsive/examples/initialisation/new.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Responsive/examples/initialisation/option.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Responsive/examples/styling/bootstrap.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Responsive/examples/styling/compact.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Responsive/examples/styling/foundation.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Responsive/examples/styling/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Responsive/examples/styling/scrolling.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Responsive/js/dataTables.responsive.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Responsive/js/dataTables.responsive.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Scroller/Readme.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Scroller/css/dataTables.scroller.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Scroller/css/dataTables.scroller.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Scroller/examples/api_scrolling.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Scroller/examples/data/2500.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Scroller/examples/data/ssp.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Scroller/examples/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Scroller/examples/large_js_source.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Scroller/examples/server-side_processing.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Scroller/examples/simple.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Scroller/examples/state_saving.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Scroller/images/loading-background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Scroller/js/dataTables.scroller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/Scroller/js/dataTables.scroller.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/Readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/css/dataTables.tableTools.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/css/dataTables.tableTools.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/examples/ajax.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/examples/alter_buttons.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/examples/bootstrap.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/examples/button_text.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/examples/collection.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/examples/defaults.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/examples/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/examples/jqueryui.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/examples/multi_instance.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/examples/multiple_tables.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/examples/new_init.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/examples/pdf_message.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/examples/plug-in.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/examples/select_column.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/examples/select_multi.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/examples/select_os.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/examples/select_single.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/examples/simple.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/examples/swf_path.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/images/collection.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/images/collection_hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/images/copy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/images/copy_hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/images/csv.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/images/csv_hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/images/pdf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/images/pdf_hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/images/print.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/images/print_hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/images/psd/collection.psd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/images/psd/copy document.psd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/images/psd/file_types.psd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/images/psd/printer.psd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/images/xls.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/images/xls_hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/js/dataTables.tableTools.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/js/dataTables.tableTools.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/swf/copy_csv_xls.swf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/extensions/TableTools/swf/copy_csv_xls_pdf.swf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/images/sort_asc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/images/sort_asc_disabled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/images/sort_both.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/images/sort_desc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/images/sort_desc_disabled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/jquery.dataTables.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/jquery.dataTables.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/jquery.dataTables.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/jquery.dataTables.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/datatables/jquery.dataTables_themeroller.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/list_best.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minerador/bot/telegram_bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/minerador/bot/telegram_bot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minerador/miner/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/minerador/miner/common.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minerador/miner/explorer.py" beforeDir="false" afterPath="$PROJECT_DIR$/minerador/miner/explorer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minerador/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/minerador/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minerproject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/minerproject/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -259,7 +52,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/minerador/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="739">
+            <state relative-caret-position="491">
               <caret line="82" column="94" selection-start-line="82" selection-start-column="94" selection-end-line="82" selection-end-column="94" />
               <folding>
                 <element signature="e#15#44#0" expanded="true" />
@@ -271,7 +64,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/minerador/miner/magazine.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
+            <state relative-caret-position="1598">
               <caret line="96" column="23" selection-start-line="96" selection-start-column="23" selection-end-line="96" selection-end-column="23" />
               <folding>
                 <element signature="e#15#24#0" expanded="true" />
@@ -311,7 +104,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/minerador/templatetags/customtags.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
+            <state relative-caret-position="1394">
               <caret line="87" column="4" selection-start-line="87" selection-start-column="4" selection-end-line="87" selection-end-column="4" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
@@ -323,7 +116,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/minerador/miner/explorer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
+            <state relative-caret-position="391">
               <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
               <folding>
                 <element signature="e#15#26#0" expanded="true" />
@@ -413,6 +206,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -445,7 +239,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -520,13 +313,13 @@
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="minerproject.settings" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\Caio\.conda\envs\delivery\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
+      <option name="port" value="8001" />
       <option name="host" value="" />
       <option name="additionalOptions" value="" />
       <option name="browserUrl" value="" />
@@ -561,18 +354,20 @@
       <workItem from="1560777400352" duration="10720000" />
       <workItem from="1560858338449" duration="19119000" />
       <workItem from="1561475899534" duration="46952000" />
+      <workItem from="1562064755064" duration="3159000" />
+      <workItem from="1562243049838" duration="20000" />
+      <workItem from="1562591693177" duration="1397000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79732000" />
+    <option name="totallyTimeSpent" value="84308000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.1433902" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.14818764" />
       <window_info id="Structure" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Database Console" order="0" sideWeight="0.48933902" weight="0.45612136" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -586,7 +381,7 @@
       <window_info anchor="bottom" id="TODO" order="9" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info anchor="bottom" id="Run" order="12" sideWeight="0.5079957" side_tool="true" weight="0.39869988" />
+      <window_info active="true" anchor="bottom" id="Run" order="12" sideWeight="0.5079957" side_tool="true" visible="true" weight="0.26868907" />
       <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.49413645" weight="0.32936078" />
       <window_info anchor="right" id="Database" order="0" visible="true" weight="0.24253732" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
@@ -712,9 +507,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/datepicker/locales/bootstrap-datepicker.ar.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/static/datepicker/locales/bootstrap-datepicker.ar.js" />
     <entry file="file://$USER_HOME$/.conda/envs/delivery/Lib/site-packages/django_datatables_view/mixins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -864,67 +657,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/list_best.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minerproject/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="27" column="79" selection-start-line="27" selection-start-column="65" selection-end-line="27" selection-end-column="79" />
-          <folding>
-            <element signature="e#701#733#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minerador/miner/explorer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
-          <folding>
-            <element signature="e#15#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
-          <folding>
-            <element signature="e#327#346#0#HTML" expanded="true" />
-            <element signature="e#374#393#0#HTML" expanded="true" />
-            <element signature="e#500#521#0#HTML" expanded="true" />
-            <element signature="e#549#570#0#HTML" expanded="true" />
-            <element signature="e#859#880#0#HTML" expanded="true" />
-            <element signature="e#997#1018#0#HTML" expanded="true" />
-            <element signature="e#1139#1160#0#HTML" expanded="true" />
-            <element signature="e#1255#1276#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minerador/miner/magazine.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="96" column="23" selection-start-line="96" selection-start-column="23" selection-end-line="96" selection-end-column="23" />
-          <folding>
-            <element signature="e#15#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.conda/envs/delivery/Lib/site-packages/django/utils/functional.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
@@ -946,9 +678,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/minerador/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="82" column="94" selection-start-line="82" selection-start-column="94" selection-end-line="82" selection-end-column="94" />
+          <folding>
+            <element signature="e#15#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minerador/miner/magazine.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1598">
+          <caret line="96" column="23" selection-start-line="96" selection-start-column="23" selection-end-line="96" selection-end-column="23" />
+          <folding>
+            <element signature="e#15#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+          <folding>
+            <element signature="e#327#346#0#HTML" expanded="true" />
+            <element signature="e#374#393#0#HTML" expanded="true" />
+            <element signature="e#500#521#0#HTML" expanded="true" />
+            <element signature="e#549#570#0#HTML" expanded="true" />
+            <element signature="e#859#880#0#HTML" expanded="true" />
+            <element signature="e#997#1018#0#HTML" expanded="true" />
+            <element signature="e#1139#1160#0#HTML" expanded="true" />
+            <element signature="e#1255#1276#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/minerador/templatetags/customtags.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
+        <state relative-caret-position="1394">
           <caret line="87" column="4" selection-start-line="87" selection-start-column="4" selection-end-line="87" selection-end-column="4" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
@@ -956,13 +732,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/minerador/views.py">
+    <entry file="file://$PROJECT_DIR$/minerador/miner/explorer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="739">
-          <caret line="82" column="94" selection-start-line="82" selection-start-column="94" selection-end-line="82" selection-end-column="94" />
+        <state relative-caret-position="391">
+          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
           <folding>
-            <element signature="e#15#44#0" expanded="true" />
+            <element signature="e#15#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minerproject/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="27" column="79" selection-start-line="27" selection-start-column="65" selection-end-line="27" selection-end-column="79" />
+          <folding>
+            <element signature="e#701#733#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/list_best.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
         </state>
       </provider>
     </entry>
