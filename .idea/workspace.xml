@@ -49,14 +49,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/minerador/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="82" column="94" selection-start-line="82" selection-start-column="94" selection-end-line="82" selection-end-column="94" />
+            <state relative-caret-position="1054">
+              <caret line="73" column="97" selection-start-line="73" selection-start-column="97" selection-end-line="73" selection-end-column="97" />
               <folding>
                 <element signature="e#15#44#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="das://30f5b34e-f8fb-46db-afaf-dba7265c5f99/schema/main/table/minerador_product">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state projectRestartId="f672f550-b118-4923-928a-11f82a949c9d">
+              <filtering />
             </state>
           </provider>
         </entry>
@@ -77,7 +86,7 @@
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
+              <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -87,16 +96,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
               <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
-              <folding>
-                <element signature="e#327#346#0#HTML" expanded="true" />
-                <element signature="e#374#393#0#HTML" expanded="true" />
-                <element signature="e#500#521#0#HTML" expanded="true" />
-                <element signature="e#549#570#0#HTML" expanded="true" />
-                <element signature="e#859#880#0#HTML" expanded="true" />
-                <element signature="e#997#1018#0#HTML" expanded="true" />
-                <element signature="e#1139#1160#0#HTML" expanded="true" />
-                <element signature="e#1255#1276#0#HTML" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -116,22 +115,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/minerador/miner/explorer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
+            <state relative-caret-position="799">
+              <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
               <folding>
                 <element signature="e#15#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/minerproject/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="27" column="79" selection-start-line="27" selection-start-column="65" selection-end-line="27" selection-end-column="79" />
-              <folding>
-                <element signature="e#701#733#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -185,17 +172,17 @@
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/minerador/miner/common.py" />
-        <option value="$PROJECT_DIR$/minerador/miner/explorer.py" />
         <option value="$PROJECT_DIR$/minerproject/urls.py" />
         <option value="$PROJECT_DIR$/templates/list_best.html" />
         <option value="$PROJECT_DIR$/templates/detail.html" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/minerador/templatetags/customtags.py" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/minerador/miner/explorer.py" />
         <option value="$PROJECT_DIR$/minerador/views.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="240" />
     <option name="y" value="130" />
     <option name="width" value="1440" />
@@ -356,20 +343,23 @@
       <workItem from="1561475899534" duration="46952000" />
       <workItem from="1562064755064" duration="3159000" />
       <workItem from="1562243049838" duration="20000" />
-      <workItem from="1562591693177" duration="1397000" />
+      <workItem from="1562591693177" duration="4053000" />
+      <workItem from="1562676012017" duration="2950000" />
+      <workItem from="1562856364710" duration="1805000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84308000" />
+    <option name="totallyTimeSpent" value="91719000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.14818764" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.15138593" />
       <window_info id="Structure" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Database Console" order="0" sideWeight="0.48933902" weight="0.45612136" />
+      <window_info anchor="bottom" id="Database Console" order="0" sideWeight="0.48720682" weight="0.45612136" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="2" />
       <window_info anchor="bottom" id="Python Console" order="3" sideWeight="0.4989339" weight="0.32936078" />
@@ -381,8 +371,8 @@
       <window_info anchor="bottom" id="TODO" order="9" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info active="true" anchor="bottom" id="Run" order="12" sideWeight="0.5079957" side_tool="true" visible="true" weight="0.26868907" />
-      <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.49413645" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="12" sideWeight="0.5127932" side_tool="true" visible="true" weight="0.45612136" />
+      <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.49307036" weight="0.32936078" />
       <window_info anchor="right" id="Database" order="0" visible="true" weight="0.24253732" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -556,25 +546,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://30f5b34e-f8fb-46db-afaf-dba7265c5f99/schema/main/table/minerador_history">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="91311875-9297-4eb7-a947-dddb2e7fd249">
-          <filtering>
-            <filter text="id=1945" />
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://30f5b34e-f8fb-46db-afaf-dba7265c5f99/schema/main/table/minerador_product">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="91311875-9297-4eb7-a947-dddb2e7fd249">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2and3/datetime.pyi">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="363">
@@ -678,10 +649,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/minerproject/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="26" column="54" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="54" />
+          <folding>
+            <element signature="e#701#733#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/minerador/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="82" column="94" selection-start-line="82" selection-start-column="94" selection-end-line="82" selection-end-column="94" />
+        <state relative-caret-position="1054">
+          <caret line="73" column="97" selection-start-line="73" selection-start-column="97" selection-end-line="73" selection-end-column="97" />
           <folding>
             <element signature="e#15#44#0" expanded="true" />
           </folding>
@@ -701,7 +682,7 @@
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
+          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -709,16 +690,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
-          <folding>
-            <element signature="e#327#346#0#HTML" expanded="true" />
-            <element signature="e#374#393#0#HTML" expanded="true" />
-            <element signature="e#500#521#0#HTML" expanded="true" />
-            <element signature="e#549#570#0#HTML" expanded="true" />
-            <element signature="e#859#880#0#HTML" expanded="true" />
-            <element signature="e#997#1018#0#HTML" expanded="true" />
-            <element signature="e#1139#1160#0#HTML" expanded="true" />
-            <element signature="e#1255#1276#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -734,20 +705,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/minerador/miner/explorer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
+        <state relative-caret-position="799">
+          <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
           <folding>
             <element signature="e#15#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minerproject/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="27" column="79" selection-start-line="27" selection-start-column="65" selection-end-line="27" selection-end-column="79" />
-          <folding>
-            <element signature="e#701#733#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -756,6 +717,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://30f5b34e-f8fb-46db-afaf-dba7265c5f99/schema/main/table/minerador_history">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="f672f550-b118-4923-928a-11f82a949c9d">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://30f5b34e-f8fb-46db-afaf-dba7265c5f99/schema/main/table/minerador_product">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="f672f550-b118-4923-928a-11f82a949c9d">
+          <filtering />
         </state>
       </provider>
     </entry>
