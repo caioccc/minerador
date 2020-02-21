@@ -168,13 +168,13 @@ class Reader(CommonMiner):
                 installments_new = self.get_installments(page)
                 logger.debug('Reader: ' + title_new + "," + photo_new + "," + price_new + "," + site_new.name)
                 print('Reader: ', title_new, photo_new, price_new, installments_new)
-                message = make_message('READER', product)
-                res = reader_bot_sendtext(message)
-                print(res)
-                if 'error_code' in res:
-                    message = make_message_refresh('READER', product)
-                    res = reader_bot_sendtext(message)
-                    print(res)
+                #message = make_message('READER', product)
+                # res = reader_bot_sendtext(message)
+                #print(res)
+                #if 'error_code' in res:
+                 #   message = make_message_refresh('READER', product)
+                #    res = reader_bot_sendtext(message)
+                #    print(res)
                 # reader_bot_sendphoto(product.photo_url)
 
                 # products = Product.objects.filter(name=title_new, url=url_new)
